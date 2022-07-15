@@ -13,7 +13,10 @@ class OnBoardingScreen extends StatefulWidget {
 
 class _OnBoardingScreenState extends State<OnBoardingScreen> {
   //controller to keep track of what page we're on
-  PageController _controller = PageController();
+  final PageController _controller = PageController();
+
+  //keep track if we are on last page  or not
+  bool onLastPage = false;
 
   @override
   Widget build(BuildContext context) {
@@ -22,6 +25,11 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
         children: [
           //page view
           PageView(
+            onPageChanged: (index) {
+              setState(() {
+                onLastPage = (index == 2);
+              });
+            },
             controller: _controller,
             children: const [
               IntroScreen1(),
@@ -47,13 +55,22 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                   SmoothPageIndicator(controller: _controller, count: 3),
 
                   //Next or Done button
-                  GestureDetector(
-                      onTap: () {
-                        _controller.nextPage(
-                            duration: const Duration(milliseconds: 500),
-                            curve: Curves.easeIn);
-                      },
-                      child: const Text("Next")),
+                  onLastPage
+                      ? GestureDetector(
+                          onTap: () {
+                            // Navigator.push(context, MaterialPageRoute(builder: (context) {return Homepage()}))
+                          },
+                          child: const Text("Done"))
+                      : GestureDetector(
+                          onTap: () {
+                            _controller.nextPage(
+                                duration: const Duration(milliseconds: 500),
+                                curve: Curves.easeIn);
+                          },
+                          child: const Text(
+                            "Next",
+                            style: TextStyle(fontWeight: FontWeight.bold),
+                          )),
                 ],
               ))
         ],
