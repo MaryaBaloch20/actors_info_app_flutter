@@ -1,3 +1,6 @@
+import 'package:actors_profiles/intro_screens/intro_screen_01.dart';
+import 'package:actors_profiles/intro_screens/intro_screen_02.dart';
+import 'package:actors_profiles/intro_screens/intro_screen_03.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
@@ -20,16 +23,10 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
           //page view
           PageView(
             controller: _controller,
-            children: [
-              Container(
-                color: Colors.red,
-              ),
-              Container(
-                color: Colors.green,
-              ),
-              Container(
-                color: Colors.yellow,
-              ),
+            children: const [
+              IntroScreen1(),
+              IntroScreen2(),
+              IntroScreen3(),
             ],
           ),
 
