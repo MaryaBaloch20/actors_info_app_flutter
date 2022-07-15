@@ -1,6 +1,7 @@
 import 'package:actors_profiles/intro_screens/intro_screen_01.dart';
 import 'package:actors_profiles/intro_screens/intro_screen_02.dart';
 import 'package:actors_profiles/intro_screens/intro_screen_03.dart';
+import 'package:actors_profiles/intro_screens/logo_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
@@ -27,11 +28,12 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
           PageView(
             onPageChanged: (index) {
               setState(() {
-                onLastPage = (index == 2);
+                onLastPage = (index == 3);
               });
             },
             controller: _controller,
             children: const [
+              LogoScreen(),
               IntroScreen1(),
               IntroScreen2(),
               IntroScreen3(),
@@ -47,12 +49,12 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                   //Skip Button
                   GestureDetector(
                       onTap: () {
-                        _controller.jumpToPage(2);
+                        _controller.jumpToPage(3);
                       },
                       child: const Text("Skip")),
 
                   //Dot Indicator
-                  SmoothPageIndicator(controller: _controller, count: 3),
+                  SmoothPageIndicator(controller: _controller, count: 4),
 
                   //Next or Done button
                   onLastPage
@@ -69,7 +71,6 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                           },
                           child: const Text(
                             "Next",
-                            style: TextStyle(fontWeight: FontWeight.bold),
                           )),
                 ],
               ))

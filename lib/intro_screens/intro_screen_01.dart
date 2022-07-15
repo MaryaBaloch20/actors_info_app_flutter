@@ -6,7 +6,19 @@ class IntroScreen1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.red[200],
+      color: Color(0xffefefef),
+      child: Center(
+        child: Column(
+          children: const [
+            Image(
+              image: AssetImage("assets/images/small_logo_trans.png"),
+            ),
+            Image(
+              image: AssetImage("assets/images/intro4.png"),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
