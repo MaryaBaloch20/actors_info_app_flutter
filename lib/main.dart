@@ -1,3 +1,4 @@
+import 'package:actors_profiles/screens/home_screen.dart';
 import 'package:actors_profiles/screens/onboarding_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -12,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: OnBoardingScreen(),
+      home: HomeScreen(),
     );
   }
 }
