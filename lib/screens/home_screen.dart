@@ -17,7 +17,11 @@ class _HomeScreenState extends State<HomeScreen> {
         appBar: AppBar(
           backgroundColor: myGreen,
           leading: IconButton(
-            icon: Icon(Icons.menu, color: bgColor),
+            icon: Icon(
+              Icons.menu,
+              color: bgColor,
+              size: 32,
+            ),
             onPressed: () {},
           ),
           elevation: 0.0,
