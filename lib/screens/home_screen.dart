@@ -83,6 +83,9 @@ class _HomeScreenState extends State<HomeScreen> {
                             // color: bgColor,
                             fontWeight: FontWeight.bold),
                       ),
+                      const SizedBox(
+                        height: 20,
+                      ),
                       Container(
                         padding: const EdgeInsets.all(5),
                         decoration: BoxDecoration(
@@ -96,10 +99,14 @@ class _HomeScreenState extends State<HomeScreen> {
                             prefixIcon: Icon(
                               Icons.search,
                               color: myGreen,
+                              size: 30,
                             ),
                           ),
                         ),
-                      )
+                      ),
+                      const SizedBox(
+                        height: 20,
+                      ),
                     ],
                   ),
                 ),
