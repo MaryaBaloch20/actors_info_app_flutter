@@ -63,53 +63,117 @@ class _HomeScreenState extends State<HomeScreen> {
                     topRight: Radius.circular(250),
                   ),
                 ),
-                clipBehavior: Clip.antiAlias,
-                child: SingleChildScrollView(
-                  physics: const BouncingScrollPhysics(),
-                  child: Column(
-                    // mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      const Text(
-                        "Find Your Fav",
-                        style: TextStyle(
-                          fontSize: 35,
-                        ),
+                // clipBehavior: Clip.antiAlias,
+                // child: SingleChildScrollView(
+                //   physics: const BouncingScrollPhysics(),
+                child: Column(
+                  // mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    const Text(
+                      "Find Your Fav",
+                      style: TextStyle(
+                        fontSize: 35,
                       ),
-                      const Text(
-                        "CELEBRITIES",
-                        style: TextStyle(
-                            fontSize: 45,
-                            // color: bgColor,
-                            fontWeight: FontWeight.bold),
+                    ),
+                    const Text(
+                      "CELEBRITIES",
+                      style: TextStyle(
+                          fontSize: 45,
+                          // color: bgColor,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    Container(
+                      padding: const EdgeInsets.all(5),
+                      decoration: BoxDecoration(
+                        color: bgColor,
+                        borderRadius: BorderRadius.circular(15),
                       ),
-                      const SizedBox(
-                        height: 20,
-                      ),
-                      Container(
-                        padding: const EdgeInsets.all(5),
-                        decoration: BoxDecoration(
-                          color: bgColor,
-                          borderRadius: BorderRadius.circular(15),
-                        ),
-                        child: TextField(
-                          decoration: InputDecoration(
-                            hintText: "Search you're looking for",
-                            border: InputBorder.none,
-                            prefixIcon: Icon(
-                              Icons.search,
-                              color: myGreen,
-                              size: 30,
-                            ),
+                      child: TextField(
+                        decoration: InputDecoration(
+                          hintText: "Search you're looking for",
+                          border: InputBorder.none,
+                          prefixIcon: Icon(
+                            Icons.search,
+                            color: myGreen,
+                            size: 30,
                           ),
                         ),
                       ),
-                      const SizedBox(
-                        height: 20,
+                    ),
+                    const SizedBox(
+                      height: 30,
+                    ),
+                    Expanded(
+                      child: SingleChildScrollView(
+                        physics: const BouncingScrollPhysics(),
+                        child: Column(
+                          children: [
+                            Container(
+                              height: 200.0,
+                              decoration: BoxDecoration(
+                                color: bgColor,
+                                borderRadius: BorderRadius.circular(16),
+                              ),
+                              child: const Center(
+                                child: Text(
+                                  "Lollywood",
+                                  style: TextStyle(fontSize: 35),
+                                ),
+                              ),
+                            ),
+                            const SizedBox(height: 10),
+                            Container(
+                              height: 200.0,
+                              decoration: BoxDecoration(
+                                color: bgColor,
+                                borderRadius: BorderRadius.circular(16),
+                              ),
+                              child: const Center(
+                                child: Text(
+                                  "Bollywood",
+                                  style: TextStyle(fontSize: 35),
+                                ),
+                              ),
+                            ),
+                            const SizedBox(height: 10),
+                            Container(
+                              height: 200.0,
+                              decoration: BoxDecoration(
+                                color: bgColor,
+                                borderRadius: BorderRadius.circular(16),
+                              ),
+                              child: const Center(
+                                child: Text(
+                                  "Hollywood",
+                                  style: TextStyle(fontSize: 35),
+                                ),
+                              ),
+                            ),
+                            const SizedBox(height: 10),
+                            Container(
+                              height: 200.0,
+                              decoration: BoxDecoration(
+                                color: bgColor,
+                                borderRadius: BorderRadius.circular(16),
+                              ),
+                              child: const Center(
+                                child: Text(
+                                  "Kdrama",
+                                  style: TextStyle(fontSize: 35),
+                                ),
+                              ),
+                            )
+                          ],
+                        ),
                       ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
+                // ),
               ),
             ),
           ],
