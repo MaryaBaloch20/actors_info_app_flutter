@@ -36,6 +36,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 height: MediaQuery.of(context).size.height * 0.3,
                 width: MediaQuery.of(context).size.width,
                 decoration: BoxDecoration(
+                  //Gradient background
                   gradient: LinearGradient(
                     begin: Alignment.topCenter,
                     end: Alignment.bottomCenter,
@@ -44,6 +45,8 @@ class _HomeScreenState extends State<HomeScreen> {
                       bgColor_zeroOpacity,
                     ],
                   ),
+
+                  //Logo Image here
                   image: const DecorationImage(
                     image: AssetImage("assets/images/3small_logo_trans.png"),
                     fit: BoxFit.fitWidth,
@@ -67,9 +70,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 // child: SingleChildScrollView(
                 //   physics: const BouncingScrollPhysics(),
                 child: Column(
-                  // mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
+                    //Heading Text
                     const Text(
                       "Find Your Fav",
                       style: TextStyle(
@@ -78,10 +81,8 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                     const Text(
                       "CELEBRITIES",
-                      style: TextStyle(
-                          fontSize: 45,
-                          // color: bgColor,
-                          fontWeight: FontWeight.bold),
+                      style:
+                          TextStyle(fontSize: 45, fontWeight: FontWeight.bold),
                     ),
                     const SizedBox(
                       height: 20,
@@ -111,6 +112,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       child: SingleChildScrollView(
                         physics: const BouncingScrollPhysics(),
                         child: Column(
+                          //Industy wise catogries added here
                           children: [
                             Container(
                               height: 200.0,
@@ -166,7 +168,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                   style: TextStyle(fontSize: 35),
                                 ),
                               ),
-                            )
+                            ),
+                            const SizedBox(height: 10),
                           ],
                         ),
                       ),
