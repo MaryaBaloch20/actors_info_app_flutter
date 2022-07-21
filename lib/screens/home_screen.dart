@@ -24,6 +24,16 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
           onPressed: () {},
         ),
+        actions: [
+          IconButton(
+            icon: Icon(
+              Icons.person,
+              color: bgColor,
+              size: 32,
+            ),
+            onPressed: () {},
+          ),
+        ],
         elevation: 0.0,
       ),
       body: SafeArea(
@@ -119,13 +129,18 @@ class _HomeScreenState extends State<HomeScreen> {
                               decoration: BoxDecoration(
                                 color: bgColor,
                                 borderRadius: BorderRadius.circular(16),
+                                image: DecorationImage(
+                                    image: AssetImage(
+                                        "assets/images/Bollywood.jpg"),
+                                    fit: BoxFit.cover),
                               ),
-                              child: const Center(
-                                child: Text(
-                                  "Lollywood",
-                                  style: TextStyle(fontSize: 35),
-                                ),
-                              ),
+
+                              // child: const Center(
+                              //   child: Text(
+                              //     "Lollywood",
+                              //     style: TextStyle(fontSize: 35),
+                              //   ),
+                              // ),
                             ),
                             const SizedBox(height: 10),
                             Container(
