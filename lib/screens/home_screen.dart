@@ -1,4 +1,5 @@
 import 'package:actors_profiles/ui_elements/colors_in_use.dart';
+import 'package:actors_profiles/widgets/homescreen_cards.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -123,62 +124,19 @@ class _HomeScreenState extends State<HomeScreen> {
                         physics: const BouncingScrollPhysics(),
                         child: Column(
                           //Industy wise catogries added here
-                          children: [
+                          children: const [
                             //Lollywood
-                            Container(
-                              height: 200.0,
-                              decoration: BoxDecoration(
-                                color: bgColor,
-                                borderRadius: BorderRadius.circular(16),
-                                image: const DecorationImage(
-                                    image: AssetImage(
-                                        "assets/images/Lollywood.jpg"),
-                                    fit: BoxFit.cover),
-                              ),
-                            ),
-                            const SizedBox(height: 10),
-
+                            HomeScreenCard(imageName: "Lollywood"),
+                            SizedBox(height: 10),
                             //Bollywood
-                            Container(
-                              height: 200.0,
-                              decoration: BoxDecoration(
-                                color: bgColor,
-                                borderRadius: BorderRadius.circular(16),
-                                image: const DecorationImage(
-                                    image: AssetImage(
-                                        "assets/images/Bollywood.jpg"),
-                                    fit: BoxFit.cover),
-                              ),
-                            ),
-                            const SizedBox(height: 10),
-
+                            HomeScreenCard(imageName: "Bollywood"),
+                            SizedBox(height: 10),
                             //Hollywood
-                            Container(
-                              height: 200.0,
-                              decoration: BoxDecoration(
-                                color: bgColor,
-                                borderRadius: BorderRadius.circular(16),
-                                image: const DecorationImage(
-                                    image: AssetImage(
-                                        "assets/images/hollywood.jpg"),
-                                    fit: BoxFit.cover),
-                              ),
-                            ),
-                            const SizedBox(height: 10),
-
-                            //K-Drama
-                            Container(
-                              height: 200.0,
-                              decoration: BoxDecoration(
-                                color: bgColor,
-                                borderRadius: BorderRadius.circular(16),
-                                image: const DecorationImage(
-                                    image: AssetImage(
-                                        "assets/images/Halyuwood.jpg"),
-                                    fit: BoxFit.cover),
-                              ),
-                            ),
-                            const SizedBox(height: 10),
+                            HomeScreenCard(imageName: "hollywood"),
+                            SizedBox(height: 10),
+                            //Halyuwood
+                            HomeScreenCard(imageName: "Halyuwood"),
+                            SizedBox(height: 10),
                           ],
                         ),
                       ),
