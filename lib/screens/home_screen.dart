@@ -124,64 +124,58 @@ class _HomeScreenState extends State<HomeScreen> {
                         child: Column(
                           //Industy wise catogries added here
                           children: [
+                            //Lollywood
                             Container(
                               height: 200.0,
                               decoration: BoxDecoration(
                                 color: bgColor,
                                 borderRadius: BorderRadius.circular(16),
-                                image: DecorationImage(
+                                image: const DecorationImage(
+                                    image: AssetImage(
+                                        "assets/images/Lollywood.jpg"),
+                                    fit: BoxFit.cover),
+                              ),
+                            ),
+                            const SizedBox(height: 10),
+
+                            //Bollywood
+                            Container(
+                              height: 200.0,
+                              decoration: BoxDecoration(
+                                color: bgColor,
+                                borderRadius: BorderRadius.circular(16),
+                                image: const DecorationImage(
                                     image: AssetImage(
                                         "assets/images/Bollywood.jpg"),
                                     fit: BoxFit.cover),
                               ),
+                            ),
+                            const SizedBox(height: 10),
 
-                              // child: const Center(
-                              //   child: Text(
-                              //     "Lollywood",
-                              //     style: TextStyle(fontSize: 35),
-                              //   ),
-                              // ),
-                            ),
-                            const SizedBox(height: 10),
+                            //Hollywood
                             Container(
                               height: 200.0,
                               decoration: BoxDecoration(
                                 color: bgColor,
                                 borderRadius: BorderRadius.circular(16),
-                              ),
-                              child: const Center(
-                                child: Text(
-                                  "Bollywood",
-                                  style: TextStyle(fontSize: 35),
-                                ),
+                                image: const DecorationImage(
+                                    image: AssetImage(
+                                        "assets/images/hollywood.jpg"),
+                                    fit: BoxFit.cover),
                               ),
                             ),
                             const SizedBox(height: 10),
+
+                            //K-Drama
                             Container(
                               height: 200.0,
                               decoration: BoxDecoration(
                                 color: bgColor,
                                 borderRadius: BorderRadius.circular(16),
-                              ),
-                              child: const Center(
-                                child: Text(
-                                  "Hollywood",
-                                  style: TextStyle(fontSize: 35),
-                                ),
-                              ),
-                            ),
-                            const SizedBox(height: 10),
-                            Container(
-                              height: 200.0,
-                              decoration: BoxDecoration(
-                                color: bgColor,
-                                borderRadius: BorderRadius.circular(16),
-                              ),
-                              child: const Center(
-                                child: Text(
-                                  "Kdrama",
-                                  style: TextStyle(fontSize: 35),
-                                ),
+                                image: const DecorationImage(
+                                    image: AssetImage(
+                                        "assets/images/Halyuwood.jpg"),
+                                    fit: BoxFit.cover),
                               ),
                             ),
                             const SizedBox(height: 10),
