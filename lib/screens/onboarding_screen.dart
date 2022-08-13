@@ -2,6 +2,7 @@ import 'package:actors_profiles/intro_screens/intro_screen_01.dart';
 import 'package:actors_profiles/intro_screens/intro_screen_02.dart';
 import 'package:actors_profiles/intro_screens/intro_screen_03.dart';
 import 'package:actors_profiles/intro_screens/logo_screen.dart';
+import 'package:actors_profiles/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
@@ -60,7 +61,10 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                   onLastPage
                       ? GestureDetector(
                           onTap: () {
-                            // Navigator.push(context, MaterialPageRoute(builder: (context) {return Homepage()}))
+                            // Navigator.push(context,
+                            //     MaterialPageRoute(builder: (context) {
+                            //   return HomeScreen();
+                            // }));
                           },
                           child: const Text("Done"))
                       : GestureDetector(
